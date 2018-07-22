@@ -79,10 +79,10 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 <script>
 $(document).ready(function() {
     window.intercomSettings = {
-        app_id: "tso4ppid",
+        app_id: (location.hostname === "localhost") ? "k1s8cao0" : "tso4ppid"
     };
 
-    $().button('toggle');
+    console.dir(window.intercomSettings);
 
     $.urlParam = function(name){
         var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
