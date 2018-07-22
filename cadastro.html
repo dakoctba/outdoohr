@@ -108,18 +108,14 @@ $(document).ready(function() {
             city: $("input[name='city']").val(),
             name: $("input[name='name']").val(),
             email: $("input[name='email']").val(),
-            target: $('#target input:radio:checked').val() || ""
+            target: $('#target input:radio:checked').val() || "",
+            created_at: new Date()
         };
 
         if (dados.city === "" || dados.name === "" || dados.email === "" || dados.target === "") {
             alert("Por favor, preencha todos os campos");
         } else {
-            Intercom("update", {
-                name: "Jackson Teixeira",
-                email: "jackson@outdoohr.com",
-                target: "anunciar",
-                created_at: new Date()
-            });
+            Intercom("update", dados);
 
             alert("Obrigado por sua inscrição e até logo!");
         }
