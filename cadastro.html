@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://fonts.googleapis.com/css?family=Raleway:100|Roboto" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+<link rel="stylesheet" href="assets/stylesheets/application.css">
+<title>Outdoohr Mídia Exterior: Top Sight, Front Light e Outdoors</title>
+<meta name="description" content="Anuncie rápido, online e com segurança. Ou seja um parceiro e ganhe dinheiro alugando seu terreno para instalação de outdoors.">
+<style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-N4ZP5H6':true});</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-122678073-1', 'auto');
+	ga('require', 'GTM-N4ZP5H6');
+	ga('send', 'pageview');
+	</script>
+</head>
+
+<body>
+
+<header>
+    <a href="/"><img src="assets/images/outdoohr-temporary-image-small.jpg" alt="Outdoohr Mídia Exterior: Top Sight, Front Light e Outdoors" class="logo"></a>
+</header>
+
+<div class="container-fluid text-center">
+	<div class="row">
+		<div class="col-md titulo-pagina-inicial">
+			<h1>Ahhh!! Ainda não chegamos em <span class="city">Curitiba</span.></h1>
+			<h2>Você gostaria de ser avisado quando estivermos por aí?</h2>
+		</div>
+	</div>
+	<div class="row search">
+		<div class="col-md-6 offset-md-3">
+			<form action="cadastro" name="form">
+
+                <p><input type="text" name="city" class="form-control" placeholder="Digite a cidade"></p>
+
+                <p><input type="text" name="name" class="form-control" placeholder="Digite seu nome"></p>
+
+                <p><input type="text" name="email" class="form-control" placeholder="Digite seu e-mail"></p>
+
+                <br>
+
+                <div id="target">
+                    <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="anunciar" name="target" value="anunciar" class="custom-control-input">
+                            <label class="custom-control-label" for="anunciar">Quero anunciar</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="alugar" name="target" value="alugar" class="custom-control-input">
+                        <label class="custom-control-label" for="alugar">Quero alugar meu terreno para veiculação de outdoors</label>
+                    </div>
+                </div>
+
+                <br><br>
+
+                <p class="text-right"><button type="button" class="btn btn-outline-success">Enviar meus dados</button></p>
+
+			</form>
+		</div>
+	</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function() {
+    $().button('toggle');
+
+    $.urlParam = function(name){
+        var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+        if (results==null){
+            return null;
+        } else {
+            return decodeURI(results[1]) || null;
+        }
+    }
+
+    var city = $.urlParam('city');
+
+    if (city === null || city === "") {
+        $(".titulo-pagina-inicial h1").text("Logo logo chegaremos por aí.");
+        $(".titulo-pagina-inicial h2").text("Você gostaria de ser avisado quando estivermos na sua cidade?");
+    } else {
+        $(".city").text(city);
+        $("input[name='city']").val(city);
+    }
+
+    $(".btn-outline-success").bind('click', function(e) {
+        var dados = {
+            city: $("input[name='city']").val(),
+            name: $("input[name='name']").val(),
+            email: $("input[name='email']").val(),
+            target: $('#target input:radio:checked').val() || ""
+        };
+
+        if (dados.city === "" || dados.name === "" || dados.email === "" || dados.target === "") {
+            alert("Por favor, preencha todos os campos");
+        } else {
+            alert("Submeeeeeeeeeeete");
+        }
+
+        e.preventDefault();
+    }); 
+});
+
+
+</script>
+</body>
+</html>

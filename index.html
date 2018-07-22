@@ -27,8 +27,9 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 </head>
 
 <body>
+
 <header>
-	<img src="assets/images/outdoohr-temporary-image-small.jpg" class="logo">
+	<a href="/"><img src="assets/images/outdoohr-temporary-image-small.jpg" alt="Outdoohr Mídia Exterior: Top Sight, Front Light e Outdoors" class="logo"></a>
 </header>
 
 <div class="container-fluid text-center">
@@ -40,17 +41,37 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 	</div>
 	<div class="row search">
 		<div class="col-md-6 offset-md-3">
-			<form action="cadastro" name="form">
+			<form action="cadastro.html" name="form" id="form">
 				<input type="text" name="city" class="form-control" placeholder="Em qual cidade você quer anunciar?">
 			</form>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col">
-			<h3><a href="#">Proprietário, cadastre seu imóvel</a></h3>
+			<h3><a href="cadastro.html">Proprietário, cadastre seu imóvel</a></h3>
 		</div>
 	</div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script>
+	$('.form-control').keypress(function (e) {
+		if (e.which == 13) {
+			if ($(this).val().trim() !== "") {
+				$("#form").submit();
+			}
+			e.preventDefault();
+		}
+	});
+</script>
+
+<script>
+	window.intercomSettings = {
+		app_id: "tso4ppid"
+	};
+</script>
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/tso4ppid';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
 
 </body>
 </html>
