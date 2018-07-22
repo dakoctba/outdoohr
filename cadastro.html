@@ -99,6 +99,8 @@ $(document).ready(function() {
         $(".titulo-pagina-inicial h1").text("Logo logo chegaremos por aí.");
         $(".titulo-pagina-inicial h2").text("Você gostaria de ser avisado quando estivermos na sua cidade?");
     } else {
+        city = city.replace(/\+/, ' ');
+        
         $(".city").text(city);
         $("input[name='city']").val(city);
     }
