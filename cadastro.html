@@ -105,14 +105,14 @@ $(document).ready(function() {
 
     $(".btn-outline-success").bind('click', function(e) {
         var dados = {
-            city: $("input[name='city']").val(),
+            cidade_interesse: $("input[name='city']").val(),
             name: $("input[name='name']").val(),
             email: $("input[name='email']").val(),
             target: $('#target input:radio:checked').val() || "",
             created_at: new Date()
         };
 
-        if (dados.city === "" || dados.name === "" || dados.email === "" || dados.target === "") {
+        if (dados.cidade_interesse === "" || dados.name === "" || dados.email === "" || dados.target === "") {
             alert("Por favor, preencha todos os campos");
         } else {
             Intercom("update", dados);
